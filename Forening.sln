@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeningGodtfolk", "ForeningGodtfolk\ForeningGodtfolk.csproj", "{32A914CB-9346-41F5-9A00-2A344256D35E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeningGodtfolk", "ForeningGodtfolk\ForeningGodtfolk.csproj", "{32A914CB-9346-41F5-9A00-2A344256D35E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeningGodtfolk.DataAccess", "foreningGodtfolk.DataAccess\ForeningGodtfolk.DataAccess.csproj", "{5BB753D8-3645-43C8-92EB-8C85EC27DB4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeningGodtfolk.Models", "ForeningGodtfolk.Models\ForeningGodtfolk.Models.csproj", "{B0CE8880-BF92-4A26-ADDD-1BEA9ED44F35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoreningGodtfolk.Utility", "DoreningGodtfolk.Utility\DoreningGodtfolk.Utility.csproj", "{0E299C47-0A8B-4127-9951-2DC20E37ECFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{32A914CB-9346-41F5-9A00-2A344256D35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A914CB-9346-41F5-9A00-2A344256D35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A914CB-9346-41F5-9A00-2A344256D35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB753D8-3645-43C8-92EB-8C85EC27DB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB753D8-3645-43C8-92EB-8C85EC27DB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB753D8-3645-43C8-92EB-8C85EC27DB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB753D8-3645-43C8-92EB-8C85EC27DB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0CE8880-BF92-4A26-ADDD-1BEA9ED44F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0CE8880-BF92-4A26-ADDD-1BEA9ED44F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0CE8880-BF92-4A26-ADDD-1BEA9ED44F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0CE8880-BF92-4A26-ADDD-1BEA9ED44F35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E299C47-0A8B-4127-9951-2DC20E37ECFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E299C47-0A8B-4127-9951-2DC20E37ECFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E299C47-0A8B-4127-9951-2DC20E37ECFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E299C47-0A8B-4127-9951-2DC20E37ECFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
