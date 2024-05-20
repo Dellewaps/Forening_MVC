@@ -2,8 +2,9 @@ using ForeningGodtfolk.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ForeningGodtfolk.Controllers
+namespace ForeningGodtfolk.Areas.People.Controllers
 {
+    [Area("People")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

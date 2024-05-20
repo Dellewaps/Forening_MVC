@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ForeningGodtfolk.DataAccess.Repository.IRepository
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface IHistoryRepository : IRepository<History>
     {
-        void Update(Category obj);
+        void Update(History obj);
     }
 }

@@ -4,6 +4,7 @@ using ForeningGodtfolk.DataAcess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForeningGodtfolk.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240426192323_AddForeignKeyForCategoryAndHistoryRelation")]
+    partial class AddForeignKeyForCategoryAndHistoryRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -134,10 +137,6 @@ namespace ForeningGodtfolk.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -155,7 +154,6 @@ namespace ForeningGodtfolk.DataAccess.Migrations
                             CategoryId = 1,
                             Date = new DateOnly(2024, 5, 8),
                             Description = "Markedet hvor der vises håndværk fra gammle tider og sælges ting",
-                            ImageUrl = "",
                             Title = "Tylstrup Middelalder Marked"
                         },
                         new
@@ -164,7 +162,6 @@ namespace ForeningGodtfolk.DataAccess.Migrations
                             CategoryId = 1,
                             Date = new DateOnly(2024, 6, 27),
                             Description = "Vikinge markede Lindholm Høje. Marked med levende vikinger og salgsboder.",
-                            ImageUrl = "",
                             Title = "Lindholm Marked"
                         });
                 });

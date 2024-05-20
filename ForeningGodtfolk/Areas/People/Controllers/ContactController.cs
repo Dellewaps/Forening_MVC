@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ForeningGodtfolk.Controllers
+namespace ForeningGodtfolk.Areas.People.Controllers
 {
-    public class HistoryController : Controller
+    public class ContactController : Controller
     {
         public IActionResult Index()
         {

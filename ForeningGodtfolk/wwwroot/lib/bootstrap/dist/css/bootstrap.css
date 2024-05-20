@@ -3854,7 +3854,7 @@ textarea.form-control-lg {
     color: var(--bs-dropdown-color);
     text-align: left;
     list-style: none;
-    background-color: var(--bs-dropdown-bg);
+    background-color: #27ae60;
     background-clip: padding-box;
     border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
     border-radius: var(--bs-dropdown-border-radius);

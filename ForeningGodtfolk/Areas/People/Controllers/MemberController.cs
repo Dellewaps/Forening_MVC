@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ForeningGodtfolk.Controllers
+namespace ForeningGodtfolk.Areas.People.Controllers
 {
-    public class CalenderController : Controller
+    public class MemberController : Controller
     {
         public IActionResult Index()
         {

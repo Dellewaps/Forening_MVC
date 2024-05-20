@@ -21,4 +21,9 @@
     <ProjectReference Include="..\foreningGodtfolk.DataAccess\ForeningGodtfolk.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\images\history\" />
+  </ItemGroup>
+
 </Project>

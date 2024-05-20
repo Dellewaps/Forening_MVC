@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Calender>
+
+
+<div class="card col-12 border-1 p-2 shadow border-2 rounded m-4">
+    <div class="pl-1">
+        <p class="card-title h2 text-dark opacity-75 text-uppercase text-center">Kalender</p>
+    </div>
+</div>
+<div class="row" style="height:auto; float:left; display:flow; ">
+    <div id="myBtnContainer" class="card col-12 border-1 p-2 shadow border-2 rounded m-4">
+        <div class="pl-1">
+            <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">Tema</p>
+        </div>
+        <div class="pl-1">
+            <button  class="btn active card-title h6 text-dark  text-center" onclick="filterSelection('all')">Vis alle</button>
+        </div>
+        @foreach (var category in ViewBag.categoryList)
+        {
+            <div class="pl-1">
+                <button class="btn @category.Name card-title h6 text-dark text-center" onclick="filterSelection('@category.Name')">@category.Name</button>
+            </div>
+        }
+
+
+    </div>
+</div>
+<div class="row m3" style="display:flow; overflow:hidden;">
+    @foreach (var calender in Model)
+    {
+        <div class="filterDiv @calender.Category.Name card col-11 border-1 p-1 shadow border-2 rounded m-2" style="float:right;">
+
+            <div class="pl-1" style="display:flex;">
+                <p class="card-title h6 text-dark text-center" style="margin:auto;">@calender.Title</p>
+                <p class="card-title h6 text-dark text-center">@calender.Date</p>
+                
+            </div>
+            <div class="pl-1">
+                <p class="card-title h6 text-dark text-center">@calender.Category.Name</p>
+            </div>
+            <div class="pl-1">
+                <p class="card-body text-dark">@calender.Description</p>
+            </div>
+
+
+
+
+
+
+        </div>
+    }
+</div>
+
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        removeClass(x[i], "show");
+           
+        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+      }
+    }
+
+    function addClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+
+        console.dir(arr1);
+
+        console.dir(arr2);
+
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) 
+        {
+
+                
+
+            element.className += " " + arr2[i];
+        }
+            console.dir(element.className += " " + arr2[i]);
+      }
+    }
+
+    function removeClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+</script>
