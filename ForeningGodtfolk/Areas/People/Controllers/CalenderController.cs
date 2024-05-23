@@ -30,5 +30,16 @@ namespace ForeningGodtfolk.Areas.People.Controllers
             
             return View(calenderList);
         }
+
+        public IActionResult Details(int Id)
+        {
+            List<Category> calenderVM = _unitOfWork.Category.GetAll().ToList();
+
+
+            Calender calender = _unitOfWork.Calender.Get(u => u.Id == Id, includeProperties: "Category");
+            ViewBag.categoryList = calenderVM;
+
+            return View(calender);
+        }
     }
 }

@@ -4,7 +4,7 @@
     <div class="card-header bg-primary py-3">
         <div class="row">
             <div class="col text-center">
-                <h2 class="text-white py-2">Gistorie liste</h2>
+                <h2 class="text-white py-2">Historie liste</h2>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                     <tr>
                         <td>@obj.Title</td>
                         <td>
-                            @obj.Description
+                            @Html.Raw(obj.Description)
                         </td>
                         <td>
                             @obj.Date

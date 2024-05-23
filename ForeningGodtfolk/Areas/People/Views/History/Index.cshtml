@@ -31,21 +31,21 @@
 
             <div class="pl-1" style="display:flex;">
                 <p class="card-title h6 text-dark text-center" style="margin:auto;">@history.Title</p>
+            </div>
+            <div class="pl-1">
                 <p class="card-title h6 text-dark text-center">@history.Date</p>
-
             </div>
             <div class="pl-1">
                 <p class="card-title h6 text-dark text-center">@history.Category.Name</p>
             </div>
             <div class="pl-1">
-                <p class="card-body text-dark">@history.Description</p>
+                <p class="card-body text-dark">@Html.Raw(history.Description)</p>
             </div>
-
-
-
-
-
-
+            <div>
+                <a asp-action="Details" asp-route-Id="@history.Id" class="btn btn-primary bg-gradient border-0 form-control">
+                    Detaljer
+                </a>
+            </div>
         </div>
     }
 </div>
